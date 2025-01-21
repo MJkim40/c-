@@ -1,39 +1,39 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <string.h>
-//
-//struct Book {
-//	int number;
-//	char title[100];
-//};
-//
-//int main() {
-//	struct Book* p;
-//	int num;
-//
-//	//malloc()À» ÀÌ¿ëÇÑ µ¿Àû ÇÒ´ç
-//	printf("¸î ±ÇÀÇ Ã¥ÀÌ ÀÖ³ª¿ä? ");
-//	scanf("%d", &num);
-//	p = (struct Book*)malloc(num * sizeof(struct Book));
-//	if (p == NULL) {
-//		printf("¸Ş¸ğ¸® ÇÒ´ç ¿À·ù\n");
-//		return 1;
-//	}
-//
-//	//±¸Á¶Ã¼ ¸â¹ö º¯¼ö °ª ´ëÀÔ(¹è¿­ ÀÎµ¦½º)
-//	getchar();
-//	for (int i = 0; i < num; i++) {
-//		printf("Ã¥ Á¦¸ñ: ");
-//		fgets(p[i].title, sizeof(p[i].title), stdin);
-//	}
-//	printf("\n\n");
-//
-//	for (int i = 0; i < num; i++) {
-//		printf("%d: %s", i + 1, p[i].title);
-//	}
-//
-//	free(p);
-//
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Book {
+	int number;
+	char title[100];
+};
+
+int main() {
+	struct Book* p;
+	int num;
+
+	//malloc()ì„ ì´ìš©í•œ ë™ì  í• ë‹¹
+	printf("ëª‡ ê¶Œì˜ ì±…ì´ ìˆë‚˜ìš”? ");
+	scanf("%d", &num);
+	p = (struct Book*)malloc(num * sizeof(struct Book));
+	if (p == NULL) {
+		printf("ë©”ëª¨ë¦¬ í• ë‹¹ ì˜¤ë¥˜\n");
+		return 1;
+	}
+
+	//êµ¬ì¡°ì²´ ë©¤ë²„ ë³€ìˆ˜ ê°’ ëŒ€ì…(ë°°ì—´ ì¸ë±ìŠ¤)
+	getchar();
+	for (int i = 0; i < num; i++) {
+		printf("ì±… ì œëª©: ");
+		fgets(p[i].title, sizeof(p[i].title), stdin);
+	}
+	printf("\n\n");
+
+	for (int i = 0; i < num; i++) {
+		printf("%d: %s", i + 1, p[i].title);
+	}
+
+	free(p);
+
+	return 0;
+}
