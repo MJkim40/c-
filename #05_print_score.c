@@ -1,35 +1,7 @@
-//#include <stdio.h>
-//
-//double print_score(int*, int );
-//
-////int main()
-////{
-////	int score[5] = { 90,80,35,77,45 };
-////	int sum;
-////	printf("%p\n", score);
-////	sum = print_score(score, 5);
-////
-////	printf("total score: %d", sum);
-////
-////	return 0;
-////}
-////
-//double print_score(int* pointer, int size)
-//{
-//	// ÇÔ¼ö È£ÃâÀ» ÀÌ¿ëÇÏ¿© ¿¹½Ã¿Í °°Àº Ãâ·ÂÀÌ µÇµµ·Ï
-//	// ÇÔ¼ö º»Ã¼¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
-//	int i = 0;
-//	double sum = 0.0;
-//	while (i < size)
-//	{
-//		printf("address: %p\n", (void*)(pointer+i));
-//		sum += pointer[i];
-//		i++;
-//	}
-//	return sum;
-//}
-//
-////±³¼ö´Ô²²¼­ ¾Ë·ÁÁÖ½Å ´ä
+#include <stdio.h>
+
+double print_score(int*, int );
+
 //int main()
 //{
 //	int score[5] = { 90,80,35,77,45 };
@@ -42,14 +14,42 @@
 //	return 0;
 //}
 //
-//double print_score(int* pointer, int size)
-//{
-//	int X = 0;
-//
-//	for (int i = 0; i < size; i++)
-//	{
-//		X += *(pointer + i);
-//		printf("address: %p\n", (pointer + i));
-//	}
-//	return X;
-//}
+double print_score(int* pointer, int size)
+{
+	// í•¨ìˆ˜ í˜¸ì¶œì„ ì´ìš©í•˜ì—¬ ì˜ˆì‹œì™€ ê°™ì€ ì¶œë ¥ì´ ë˜ë„ë¡
+	// í•¨ìˆ˜ ë³¸ì²´ë¥¼ ìž‘ì„±í•˜ì„¸ìš”.
+	int i = 0;
+	double sum = 0.0;
+	while (i < size)
+	{
+		printf("address: %p\n", (void*)(pointer+i));
+		sum += pointer[i];
+		i++;
+	}
+	return sum;
+}
+
+//êµìˆ˜ë‹˜ê»˜ì„œ ì•Œë ¤ì£¼ì‹  ë‹µ
+int main()
+{
+	int score[5] = { 90,80,35,77,45 };
+	int sum;
+	printf("%p\n", score);
+	sum = print_score(score, 5);
+
+	printf("total score: %d", sum);
+
+	return 0;
+}
+
+double print_score(int* pointer, int size)
+{
+	int X = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		X += *(pointer + i);
+		printf("address: %p\n", (pointer + i));
+	}
+	return X;
+}
