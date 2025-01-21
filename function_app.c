@@ -1,53 +1,53 @@
-//#include <stdio.h>
-//
-//// main()ÇÔ¼öÀÇ Ãâ·Â °á°ú°¡ value of x: 300ÀÌ µÇµµ·Ï
-//// function1°ú function2¸¦ Á¤ÀÇÇÏ¼¼¿ä.
-//
-//int function1(int);
-//int function2(int);
-//
-//int main(void)
-//{
-//	int x = 0;
-//	int y = 3;
-//	x = function1(y);
-//	printf("value of x: %d\n", x);
-//	return 0;
-//}
-//
-//// function1Àº 22Â° ¶óÀÎ¿¡ ÀÇÇØ x¿¡ ´ëÀÔµÇ´Â °ª¿¡ µû¶ó 
-//// Á¶°Ç¿¬»êÀÚ¸¦ ÀÌ¿ë, °á°ú¸¦ ¹İÈ¯
-//int function1(int x)
-//{
-//	printf("function1 ÇÔ¼ö°¡ È£ÃâµÊ\n");
-//	x = function2(x);
-//	/*if (x == 2)
-//	{
-//		x = x * 150;
-//	}
-//	else if (x != 2)
-//	{
-//		x = x * 100;
-//	}*/
-//	x = (x == 2) ? x * 150 :x * 100;
-//	return x;
-//
-//}
-//
-//// function2´Â ÀÎ¼ö¿¡ Â¦¼öÀÎÁö ÆÇ´ÜÇÏ¿© ±× °á°ú¸¦ ¹İÈ¯ÇÑ´Ù.
-//// Â¦¼öÀÌ¸é 2 ¹İÈ¯, È¦¼öÀÌ¸é 3 ¹İÈ¯
-//int function2(int x)
-//{
-//	printf("function2 ÇÔ¼ö°¡ È£ÃâµÊ\n");
-//	//if (x % 2 == 0)
-//	//{
-//	//	x = 2;
-//	//}
-//	//else if (x % 2 != 0)
-//	//{
-//	//	x = 3;
-//	//}
-//	x = (x % 2 == 0) ? 2 : 3;
-//	return x;
-//}
-//
+#include <stdio.h>
+
+// main()í•¨ìˆ˜ì˜ ì¶œë ¥ ê²°ê³¼ê°€ value of x: 300ì´ ë˜ë„ë¡
+// function1ê³¼ function2ë¥¼ ì •ì˜í•˜ì„¸ìš”.
+
+int function1(int);
+int function2(int);
+
+int main(void)
+{
+	int x = 0;
+	int y = 3;
+	x = function1(y);
+	printf("value of x: %d\n", x);
+	return 0;
+}
+
+// function1ì€ 22ì§¸ ë¼ì¸ì— ì˜í•´ xì— ëŒ€ì…ë˜ëŠ” ê°’ì— ë”°ë¼ 
+// ì¡°ê±´ì—°ì‚°ìë¥¼ ì´ìš©, ê²°ê³¼ë¥¼ ë°˜í™˜
+int function1(int x)
+{
+	printf("function1 í•¨ìˆ˜ê°€ í˜¸ì¶œë¨\n");
+	x = function2(x);
+	/*if (x == 2)
+	{
+		x = x * 150;
+	}
+	else if (x != 2)
+	{
+		x = x * 100;
+	}*/
+	x = (x == 2) ? x * 150 :x * 100;
+	return x;
+
+}
+
+// function2ëŠ” ì¸ìˆ˜ì— ì§ìˆ˜ì¸ì§€ íŒë‹¨í•˜ì—¬ ê·¸ ê²°ê³¼ë¥¼ ë°˜í™˜í•œë‹¤.
+// ì§ìˆ˜ì´ë©´ 2 ë°˜í™˜, í™€ìˆ˜ì´ë©´ 3 ë°˜í™˜
+int function2(int x)
+{
+	printf("function2 í•¨ìˆ˜ê°€ í˜¸ì¶œë¨\n");
+	//if (x % 2 == 0)
+	//{
+	//	x = 2;
+	//}
+	//else if (x % 2 != 0)
+	//{
+	//	x = 3;
+	//}
+	x = (x % 2 == 0) ? 2 : 3;
+	return x;
+}
+
