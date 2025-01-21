@@ -1,44 +1,44 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//
-//#define size 3
-//
-//struct student {
-//	int number;
-//	char name[20];
-//	double gpa;
-//};
-//
-//int main() {
-//	struct student table[size] = { {1, "KIM", 3.99},{2, "Min", 2.68}, {3, "LEE", 4.01} };
-//	struct student s1;
-//	FILE* fp = NULL;
-//	
-//	//ÀÌÁø ÆÄÀÏÀ» ¾²±â ¸ğµå·Î open
-//	fp = fopen("test.bin", "wb");
-//	if (fp == NULL) {
-//		printf("binary.bin ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.");
-//		return 1;
-//	}
-//
-//	//¹è¿­À» ÆÄÀÏ¿¡ ÀúÀåÇÑ´Ù.
-//	fwrite(table, sizeof(struct student), size, fp);
-//	fclose(fp);
-//
-//	//ÀÌÁø ÆÄÀÏÀ» ÀĞ±â ¸ğµå·Î ¿¬´Ù.
-//	fp = fopen("test.bin", "rb");
-//	if ((fp = fopen("student.dat", "rb")) == NULL) {
-//		fprintf(stderr, "ÀÔ·ÂÀ» À§ÇÑ ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.\n");
-//		return 1;
-//	}
-//	struct student s;
-//	for (int i = 0; i < 3; i++) {
-//		fread(&s, sizeof(struct student), 1, fp);
-//		printf("ÇĞ¹ø = %d, ÀÌ¸§ = %c, ÆòÁ¡ = %.2f", s.number, s.name, s.gpa);
-//	}
-//	fclose(fp);
-//
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
-//±³¼ö´Ô Ç®ÀÌ
+#define size 3
+
+struct student {
+	int number;
+	char name[20];
+	double gpa;
+};
+
+int main() {
+	struct student table[size] = { {1, "KIM", 3.99},{2, "Min", 2.68}, {3, "LEE", 4.01} };
+	struct student s1;
+	FILE* fp = NULL;
+	
+	//ì´ì§„ íŒŒì¼ì„ ì“°ê¸° ëª¨ë“œë¡œ open
+	fp = fopen("test.bin", "wb");
+	if (fp == NULL) {
+		printf("binary.bin íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+		return 1;
+	}
+
+	//ë°°ì—´ì„ íŒŒì¼ì— ì €ì¥í•œë‹¤.
+	fwrite(table, sizeof(struct student), size, fp);
+	fclose(fp);
+
+	//ì´ì§„ íŒŒì¼ì„ ì½ê¸° ëª¨ë“œë¡œ ì—°ë‹¤.
+	fp = fopen("test.bin", "rb");
+	if ((fp = fopen("student.dat", "rb")) == NULL) {
+		fprintf(stderr, "ì…ë ¥ì„ ìœ„í•œ íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
+		return 1;
+	}
+	struct student s;
+	for (int i = 0; i < 3; i++) {
+		fread(&s, sizeof(struct student), 1, fp);
+		printf("í•™ë²ˆ = %d, ì´ë¦„ = %c, í‰ì  = %.2f", s.number, s.name, s.gpa);
+	}
+	fclose(fp);
+
+	return 0;
+}
+
+êµìˆ˜ë‹˜ í’€ì´
