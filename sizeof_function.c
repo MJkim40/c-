@@ -1,36 +1,36 @@
- //#include <stdio.h>
- //#define _CRT_SECURE_NO_WARNINGS
- //// ´Ù¾çÇÑ ÀÚ·áÇü º¯¼ö¸¦ ¼±¾ğÇÏ°í sizeof ¿¬»êÀÚ¸¦ ÀÌ¿ëÇØ º¯¼öÀÇ Å©±â¸¦ È®ÀÎÇÏ¼¼¿ä.
+ #include <stdio.h>
+ #define _CRT_SECURE_NO_WARNINGS
+ // ë‹¤ì–‘í•œ ìë£Œí˜• ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  sizeof ì—°ì‚°ìë¥¼ ì´ìš©í•´ ë³€ìˆ˜ì˜ í¬ê¸°ë¥¼ í™•ì¸í•˜ì„¸ìš”.
 
- //int main(void)
- //{
- //  /* -----------º¯¼ö ¼±¾ğ----------- */
- //  // (i) intÇü º¯¼ö X
- //  // (ii) shortÇü º¯¼ö Y
- //  // (iii) longÇü º¯¼ö Z
- //  // (iv) floatÇü º¯¼ö A
- //  // (v) doubleÇü º¯¼ö B
- //  // (vi) charÇü º¯¼ö C
- //  /* ------------------------------ */
-	// int x;
-	// short y;
-	// long z;
-	// float a;
-	// double b;
-	// char c;
+ int main(void)
+ {
+  /* -----------ë³€ìˆ˜ ì„ ì–¸----------- */
+  // (i) intí˜• ë³€ìˆ˜ X
+  // (ii) shortí˜• ë³€ìˆ˜ Y
+  // (iii) longí˜• ë³€ìˆ˜ Z
+  // (iv) floatí˜• ë³€ìˆ˜ A
+  // (v) doubleí˜• ë³€ìˆ˜ B
+  // (vi) charí˜• ë³€ìˆ˜ C
+  /* ------------------------------ */
+	int x;
+	short y;
+	long z;
+	float a;
+	double b;
+	char c;
 
 
- //  /* -----------º¯¼öÀÇ Å©±â ÃøÁ¤----------- */
- //  // (i) º¯¼ö X, Y, Z, A, B, C¿¡ ´ëÇØ sizeof()¿¬»êÀÚ Àû¿ë
- //  // (ii) %zu Çü½Ä ÁöÁ¤ÀÚ¸¦ ÀÌ¿ëÇØ °¢ º¯¼öÀÇ Å©±â¸¦ Ãâ·Â
- //  /* ------------------------------ */
-	// printf("%zu\n", sizeof(x));
-	// printf("%zu\n", sizeof(y));
-	// printf("%zu\n", sizeof(z));
-	// printf("%zu\n", sizeof(a));
-	// printf("%zu\n", sizeof(b));
-	// printf("%zu\n", sizeof(c));
+  /* -----------ë³€ìˆ˜ì˜ í¬ê¸° ì¸¡ì •----------- */
+  // (i) ë³€ìˆ˜ X, Y, Z, A, B, Cì— ëŒ€í•´ sizeof()ì—°ì‚°ì ì ìš©
+  // (ii) %zu í˜•ì‹ ì§€ì •ìë¥¼ ì´ìš©í•´ ê° ë³€ìˆ˜ì˜ í¬ê¸°ë¥¼ ì¶œë ¥
+  /* ------------------------------ */
+	printf("%zu\n", sizeof(x));
+	printf("%zu\n", sizeof(y));
+	printf("%zu\n", sizeof(z));
+	printf("%zu\n", sizeof(a));
+	printf("%zu\n", sizeof(b));
+	printf("%zu\n", sizeof(c));
 
-	// return 0;
- //}
+	return 0;
+ }
 
