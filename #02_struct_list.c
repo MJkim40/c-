@@ -1,31 +1,31 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//#define SIZE 3
-//
-//struct student {
-//	int number;
-//	char name[20];
-//	char dept[30];
-//};
-//
-//int main() {
-//	struct student list[SIZE];
-//	int i;
-//
-//	for (i = 0; i < SIZE; i++) {
-//		printf("ÇÐ¹øÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
-//		scanf_s("%d", &list[i].number);
-//		getchar();
-//		printf("ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À: ");
-//		gets_s(list[i].name, sizeof(list[i].name));
-//		printf("¼Ò¼ÓÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
-//		gets_s(list[i].dept, sizeof(list[i].dept));
-//		printf("\n");
-//	}
-//	printf("==================================\n");
-//	for (i = 0; i < SIZE; i++) {
-//		printf("ÇÐ¹ø: %d, ÀÌ¸§: %s, ÇÐ°ú: %s\n", list[i].number, list[i].name, list[i].dept);
-//	}
-//	printf("==================================\n");
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define SIZE 3
+
+struct student {
+	int number;
+	char name[20];
+	char dept[30];
+};
+
+int main() {
+	struct student list[SIZE];
+	int i;
+
+	for (i = 0; i < SIZE; i++) {
+		printf("í•™ë²ˆì„ ìž…ë ¥í•˜ì‹œì˜¤: ");
+		scanf_s("%d", &list[i].number);
+		getchar();
+		printf("ì´ë¦„ì„ ìž…ë ¥í•˜ì‹œì˜¤: ");
+		gets_s(list[i].name, sizeof(list[i].name));
+		printf("ì†Œì†ì„ ìž…ë ¥í•˜ì‹œì˜¤: ");
+		gets_s(list[i].dept, sizeof(list[i].dept));
+		printf("\n");
+	}
+	printf("==================================\n");
+	for (i = 0; i < SIZE; i++) {
+		printf("í•™ë²ˆ: %d, ì´ë¦„: %s, í•™ê³¼: %s\n", list[i].number, list[i].name, list[i].dept);
+	}
+	printf("==================================\n");
+	return 0;
+}
