@@ -1,19 +1,19 @@
-//#include <string.h>
-//#include <stdio.h>
-//
-//int main() {
-//	char s[] = "A bird in hand is worth two in the bush";
-//	char sub[] = "bird";
-//	char* p; //p´Â ÁÖ¼Ò°ª¸¸ ³ÖÀ» ¼ö ÀÖÀ½
-//	int loc;
-//	//¹è¿­µéÀÇ ÀÎµ¦½º´Â 0ºÎÅÍ ½ÃÀÛ
-//	//Æ÷ÀÎÅÍ º¯¼ö = ÁÖ¼Ò°ª
-//	p = strstr(s, sub); //p¶ó°í ÇÏ´Â Æ÷ÀÎÅÍ º¯¼ö¿¡ strstr°ªÀ» ³ÖÀ» °Í
-//	if (p == NULL) //
-//		printf("%s°¡ ¹ß°ßµÇÁö ¾Ê¾ÒÀ½\n", sub);
-//	else { //intÇüÀÇ º¯¼ö´Â index¸¦ Ç¥ÇöÇÏ±â À§ÇÑ º¯¼ö
-//		loc = (int)(p - s); //Áö±İ »óÅÂ·Î´Â 2¶ó°íÇÏ´Â Á¤¼ö°ªÀ» °¡Áú °Í
-//		printf("%s¿¡¼­ Ã¹ ¹øÂ° %s°¡ %d¿¡¼­ ¹ß°ßµÇ¾úÀ½\n", s, sub, loc);
-//	}
-//	return 0;
-//}
+#include <string.h>
+#include <stdio.h>
+
+int main() {
+	char s[] = "A bird in hand is worth two in the bush";
+	char sub[] = "bird";
+	char* p; //pëŠ” ì£¼ì†Œê°’ë§Œ ë„£ì„ ìˆ˜ ìˆìŒ
+	int loc;
+	//ë°°ì—´ë“¤ì˜ ì¸ë±ìŠ¤ëŠ” 0ë¶€í„° ì‹œì‘
+	//í¬ì¸í„° ë³€ìˆ˜ = ì£¼ì†Œê°’
+	p = strstr(s, sub); //pë¼ê³  í•˜ëŠ” í¬ì¸í„° ë³€ìˆ˜ì— strstrê°’ì„ ë„£ì„ ê²ƒ
+	if (p == NULL) //
+		printf("%sê°€ ë°œê²¬ë˜ì§€ ì•Šì•˜ìŒ\n", sub);
+	else { //intí˜•ì˜ ë³€ìˆ˜ëŠ” indexë¥¼ í‘œí˜„í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+		loc = (int)(p - s); //ì§€ê¸ˆ ìƒíƒœë¡œëŠ” 2ë¼ê³ í•˜ëŠ” ì •ìˆ˜ê°’ì„ ê°€ì§ˆ ê²ƒ
+		printf("%sì—ì„œ ì²« ë²ˆì§¸ %sê°€ %dì—ì„œ ë°œê²¬ë˜ì—ˆìŒ\n", s, sub, loc);
+	}
+	return 0;
+}
