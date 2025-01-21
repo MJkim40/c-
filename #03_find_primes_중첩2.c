@@ -1,28 +1,28 @@
-//#include <stdio.h>
-//
-//int main()
-//{
-//	int start;
-//	int end;
-//	int count = 0;
-//	int prime;
-//	printf("¹üÀ§¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-//	scanf_s("%d %d", &start, &end);
-//	printf("%d ~ %d »çÀÌ ¼Ò¼ö Ã£±â\n", start, end);
-//	for (int i=start; i <= end; i++) {
-//		prime = 1;
-//		for (int j = 2; j < i; j++) {
-//			if (i % j == 0) {
-//				prime = 0;
-//				break;
-//			}
-//		}
-//		if (prime == 1) {
-//			printf("%d\t", i);
-//			count++;
-//			if (count % 10 == 0) {
-//				printf("\n");
-//			}
-//		}
-//	}
-//}
+#include <stdio.h>
+
+int main()
+{
+	int start;
+	int end;
+	int count = 0;
+	int prime;
+	printf("ë²”ìœ„ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+	scanf_s("%d %d", &start, &end);
+	printf("%d ~ %d ì‚¬ì´ ì†Œìˆ˜ ì°¾ê¸°\n", start, end);
+	for (int i=start; i <= end; i++) {
+		prime = 1;
+		for (int j = 2; j < i; j++) {
+			if (i % j == 0) {
+				prime = 0;
+				break;
+			}
+		}
+		if (prime == 1) {
+			printf("%d\t", i);
+			count++;
+			if (count % 10 == 0) {
+				printf("\n");
+			}
+		}
+	}
+}
