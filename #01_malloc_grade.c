@@ -1,29 +1,29 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//#include <stdlib.h>
-//
-//int main() {
-//	int* list;
-//	int i, students, sum = 0;
-//
-//	printf("ÇĞ»ıÀÇ ¼ö: ");
-//	scanf("%d", &students);
-//
-//	list = (int*)malloc(students * sizeof(int));
-//
-//	if (list == NULL) {
-//		printf("µ¿Àû ¸Ş¸ğ¸® ÇÒ´ç ¿À·ù\n");
-//		exit(1);
-//	}
-//
-//	for (i = 0; i < students; i++) {
-//		printf("ÇĞ»ı #%d ¼ºÀû: ", i + 1);
-//		scanf("%d", &list[i]);
-//		sum += list[i];
-//	}
-//
-//	float avg = (float)sum / students;
-//	printf("¼ºÀû Æò±Õ=%.2f", avg);
-//
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int* list;
+	int i, students, sum = 0;
+
+	printf("í•™ìƒì˜ ìˆ˜: ");
+	scanf("%d", &students);
+
+	list = (int*)malloc(students * sizeof(int));
+
+	if (list == NULL) {
+		printf("ë™ì  ë©”ëª¨ë¦¬ í• ë‹¹ ì˜¤ë¥˜\n");
+		exit(1);
+	}
+
+	for (i = 0; i < students; i++) {
+		printf("í•™ìƒ #%d ì„±ì : ", i + 1);
+		scanf("%d", &list[i]);
+		sum += list[i];
+	}
+
+	float avg = (float)sum / students;
+	printf("ì„±ì  í‰ê· =%.2f", avg);
+
+	return 0;
+}
