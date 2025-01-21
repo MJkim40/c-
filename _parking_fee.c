@@ -1,49 +1,49 @@
-//#include<stdio.h>
-//
-//int main() {
-//	// ºĞ´ÜÀ§ ÁÖÂ÷½Ã°£, ÁÖÂ÷ÀÏ¼ö, ÁÖÂ÷½Ã°£, ÁÖÂ÷¿ä±İ
-//	// °¢ °ªÀ» ÀúÀåÇÒ intÇü º¯¼ö ¼±¾ğ
-//	int total_min;
-//	int days;
-//	int remaining_min;
-//	int fee;
-//	int extra_min;
-//
-//	printf("ÁÖÂ÷½Ã°£ ºĞ´ÜÀ§ ÀÔ·Â: ");
-//	//scanf_s¸¦ ÀÌ¿ëÇØ ÃÑ ÁÖÂ÷½Ã°£À» ºĞ ´ÜÀ§·Î ÀÔ·Â
-//	scanf_s("%d", &total_min);
-//
-//	// days, min, fee¿¡ ÀûÇÕÇÑ °ª °è»ê ÈÄ ´ëÀÔ
-//	days = total_min / 1440;
-//	remaining_min = total_min % 1440;
-//	fee = 0;
-//	
-//	// Á¶°Ç¹®À» ÀÌ¿ëÇØ 3~5¿¡ ÇØ´çÇÏ´Â ¿ä±İ °è»ê
-//	if (remaining_min > 0 && remaining_min <= 600) {
-//		if (remaining_min <= 30) {
-//			fee += 1200;
-//		}
-//		else {
-//			fee += 1200;
-//			extra_min = remaining_min - 30;
-//			fee += (extra_min / 15) * 600;
-//			if (extra_min % 15 > 0) {
-//				fee += 600;
-//			}
-//		}
-//	}
-//	else if (remaining_min > 600) {
-//		fee += 24000;
-//	}
-//	else {
-//		fee += 0;
-//	}
-//	if (days >= 1) {
-//		fee += days * 24000;
-//	}
-//
-//	// printf¸¦ ÀÌ¿ëÇÑ ÁÖÂ÷¿ä±İ Ãâ·Â
-//	printf("ÁÖÂ÷¿ä±İ: %d ¿ø", fee);
-//	return 0;
-//}
-//
+#include<stdio.h>
+
+int main() {
+	// ë¶„ë‹¨ìœ„ ì£¼ì°¨ì‹œê°„, ì£¼ì°¨ì¼ìˆ˜, ì£¼ì°¨ì‹œê°„, ì£¼ì°¨ìš”ê¸ˆ
+	// ê° ê°’ì„ ì €ì¥í•  intí˜• ë³€ìˆ˜ ì„ ì–¸
+	int total_min;
+	int days;
+	int remaining_min;
+	int fee;
+	int extra_min;
+
+	printf("ì£¼ì°¨ì‹œê°„ ë¶„ë‹¨ìœ„ ì…ë ¥: ");
+	//scanf_së¥¼ ì´ìš©í•´ ì´ ì£¼ì°¨ì‹œê°„ì„ ë¶„ ë‹¨ìœ„ë¡œ ì…ë ¥
+	scanf_s("%d", &total_min);
+
+	// days, min, feeì— ì í•©í•œ ê°’ ê³„ì‚° í›„ ëŒ€ì…
+	days = total_min / 1440;
+	remaining_min = total_min % 1440;
+	fee = 0;
+	
+	// ì¡°ê±´ë¬¸ì„ ì´ìš©í•´ 3~5ì— í•´ë‹¹í•˜ëŠ” ìš”ê¸ˆ ê³„ì‚°
+	if (remaining_min > 0 && remaining_min <= 600) {
+		if (remaining_min <= 30) {
+			fee += 1200;
+		}
+		else {
+			fee += 1200;
+			extra_min = remaining_min - 30;
+			fee += (extra_min / 15) * 600;
+			if (extra_min % 15 > 0) {
+				fee += 600;
+			}
+		}
+	}
+	else if (remaining_min > 600) {
+		fee += 24000;
+	}
+	else {
+		fee += 0;
+	}
+	if (days >= 1) {
+		fee += days * 24000;
+	}
+
+	// printfë¥¼ ì´ìš©í•œ ì£¼ì°¨ìš”ê¸ˆ ì¶œë ¥
+	printf("ì£¼ì°¨ìš”ê¸ˆ: %d ì›", fee);
+	return 0;
+}
+
