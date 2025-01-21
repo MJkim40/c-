@@ -1,55 +1,55 @@
-//#define _CRT_SECURE_NO_WARNIGS
-//#include <stdio.h>
-//
-//struct hero {
-//	char name[10];
-//	int age;
-//	float power;
-//};
-//
-//int main() {
-//	FILE* fp = NULL;
-//	struct hero HERO;
-//	printf("HERO Á¤º¸ ÀÛ¼º\n");
-//	struct hero buff[3];
-//	printf("Alice ");
-//	scanf_s("%d %f", &buff[0].age, &buff[0].power);
-//	printf("Charlie ");
-//	scanf_s("%d %f", &buff[1].age, &buff[1].power);
-//	printf("Michael ");
-//	scanf_s("%d %f", &buff[2].age, &buff[2].power);
-//	printf("ÀÔ·Â¿Ï·á\n\n");
-//	fread(buff, sizeof(int), 3, fp);
-//	for (int i = 0; i < 3; i++) {
-//		printf("%cÀÇ power¸¦ ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä: ", buff[i].name);
-//		scanf_s("%f", &buff[i].power);
-//	}
-//	printf("Test.bin ÆÄÀÏ ¾²±â¸ðµå open\n");
-//	fp = fopen("Test.bin", "wb");
-//	for (int j = 0; j < 3; j++) {
-//		fwrite(&buff[j], sizeof(int), 3, fp);
-//	}
-//
-//	printf("Test.bin ¾²±â ½ÃÀÛ\n");
-//	
-//
-//	printf("Test.bin ÆÄÀÏ close\n\n");
-//	fclose(fp);
-//
-//	printf("Test.bin ÆÄÀÏ ÀÐ±â¸ðµå open\n");
-//	fp = fopen("Test.bin", "rb");
-//	if (fp == NULL) {
-//		printf("ÆÄÀÏ open ½ÇÆÐ\n");
-//		return 1;
-//	}
-//
-//	printf("Test.bin ÀÐ±â ½ÃÀÛ\n");
-//	printf("---------------------\n");
-//	for (int k = 0; k < 3; k++) {
-//		printf("%c %d %.1f", buff[k].name, buff[k].age, buff[k].power);
-//	}
-//	printf("---------------------\n");
-//	printf("Test.bin ÆÄÀÏ close\n");
-//	fclose(fp);
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNIGS
+#include <stdio.h>
+
+struct hero {
+	char name[10];
+	int age;
+	float power;
+};
+
+int main() {
+	FILE* fp = NULL;
+	struct hero HERO;
+	printf("HERO ì •ë³´ ìž‘ì„±\n");
+	struct hero buff[3];
+	printf("Alice ");
+	scanf_s("%d %f", &buff[0].age, &buff[0].power);
+	printf("Charlie ");
+	scanf_s("%d %f", &buff[1].age, &buff[1].power);
+	printf("Michael ");
+	scanf_s("%d %f", &buff[2].age, &buff[2].power);
+	printf("ìž…ë ¥ì™„ë£Œ\n\n");
+	fread(buff, sizeof(int), 3, fp);
+	for (int i = 0; i < 3; i++) {
+		printf("%cì˜ powerë¥¼ ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”: ", buff[i].name);
+		scanf_s("%f", &buff[i].power);
+	}
+	printf("Test.bin íŒŒì¼ ì“°ê¸°ëª¨ë“œ open\n");
+	fp = fopen("Test.bin", "wb");
+	for (int j = 0; j < 3; j++) {
+		fwrite(&buff[j], sizeof(int), 3, fp);
+	}
+
+	printf("Test.bin ì“°ê¸° ì‹œìž‘\n");
+	
+
+	printf("Test.bin íŒŒì¼ close\n\n");
+	fclose(fp);
+
+	printf("Test.bin íŒŒì¼ ì½ê¸°ëª¨ë“œ open\n");
+	fp = fopen("Test.bin", "rb");
+	if (fp == NULL) {
+		printf("íŒŒì¼ open ì‹¤íŒ¨\n");
+		return 1;
+	}
+
+	printf("Test.bin ì½ê¸° ì‹œìž‘\n");
+	printf("---------------------\n");
+	for (int k = 0; k < 3; k++) {
+		printf("%c %d %.1f", buff[k].name, buff[k].age, buff[k].power);
+	}
+	printf("---------------------\n");
+	printf("Test.bin íŒŒì¼ close\n");
+	fclose(fp);
+	return 0;
+}
