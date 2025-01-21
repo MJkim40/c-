@@ -1,29 +1,29 @@
-//#include <stdio.h>
-//
-//int main()
-//{
-//	int score;
-//	printf("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-//	scanf_s("%d", &score);
-//
-//	//Á¶°Ç¹® (if-else if-else)À» ÀÌ¿ëÇÏ¿© ÇĞÁ¡ Ãâ·Â
-//	if (score > 100 || score<0) {
-//		printf("Àß¸øµÈ Á¡¼öÀÔ´Ï´Ù.");
-//	}
-//	else if (score >= 90) {
-//		printf("AÇĞÁ¡");
-//	}
-//	else if (score >= 80) {
-//		printf("BÇĞÁ¡");
-//	}
-//	else if (score >= 70) {
-//		printf("CÇĞÁ¡");
-//	}
-//	else if (score >= 60) {
-//		printf("DÇĞÁ¡");
-//	}
-//	else {
-//		printf("FÇĞÁ¡");
-//	}
-//	return 0;
-//}
+#include <stdio.h>
+
+int main()
+{
+	int score;
+	printf("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+	scanf_s("%d", &score);
+
+	//ì¡°ê±´ë¬¸ (if-else if-else)ì„ ì´ìš©í•˜ì—¬ í•™ì  ì¶œë ¥
+	if (score > 100 || score<0) {
+		printf("ì˜ëª»ëœ ì ìˆ˜ì…ë‹ˆë‹¤.");
+	}
+	else if (score >= 90) {
+		printf("Aí•™ì ");
+	}
+	else if (score >= 80) {
+		printf("Bí•™ì ");
+	}
+	else if (score >= 70) {
+		printf("Cí•™ì ");
+	}
+	else if (score >= 60) {
+		printf("Dí•™ì ");
+	}
+	else {
+		printf("Fí•™ì ");
+	}
+	return 0;
+}
