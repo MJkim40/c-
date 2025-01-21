@@ -1,29 +1,29 @@
-//#include <stdio.h>
-//
-//int main()
-//{
-//	int a, b, c, max;
-//	printf("¼¼ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-//	scanf_s("%d %d %d", &a, &b, &c);
-//
-//	// Á¶°Ç¹®(if-else)À» ÀÌ¿ëÇØ ¼¼ ¼ö Áß °¡Àå Å« ¼ö Ãâ·Â
-//	if (a > b) {
-//		if (a > c) {
-//			max = a;
-//		}
-//		else {
-//			max = c;
-//		}
-//	}
-//	else {
-//		if (b > c) {
-//			max = b;
-//		}
-//		else {
-//			max = c;
-//		}
-//	}
-//
-//	printf("°¡Àå Å« ¼ö: %d", max);
-//	return 0;
-//}
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c, max;
+	printf("ì„¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	// ì¡°ê±´ë¬¸(if-else)ì„ ì´ìš©í•´ ì„¸ ìˆ˜ ì¤‘ ê°€ì¥ í° ìˆ˜ ì¶œë ¥
+	if (a > b) {
+		if (a > c) {
+			max = a;
+		}
+		else {
+			max = c;
+		}
+	}
+	else {
+		if (b > c) {
+			max = b;
+		}
+		else {
+			max = c;
+		}
+	}
+
+	printf("ê°€ì¥ í° ìˆ˜: %d", max);
+	return 0;
+}
