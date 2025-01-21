@@ -1,42 +1,42 @@
-//#include<stdio.h>
-////Æ÷ÀÎÅÍ¸¦ ÀÌ¿ëÇÑ °ª ¹İÈ¯À» ÀÌ¿ëÇØ ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
-//
-//int get_line(int x1, int y1, int x2, int y2, float* slope, float* y_intercept);
-//
-//int main()
-//{
-//	int a, b, c, d;
-//	
-//	printf("µÎ Á¡ÀÇ ÁÂÇ¥ ÀÔ·Â: \n");
-//	scanf_s("%d, %d\n%d, %d", &a, &b, &c, &d);
-//
-//	float s, y;
-//
-//	//µÎ ÁÂÇ¥ÀÇ x ÁÂÇ¥ °ªÀÌ °°À» ¶§, ±â¿ï±â¸¦ ±¸ÇÒ ¼ö ¾øÀ½
-//	int p = get_line(a, b, c, d, &s, &y);
-//	//get_line ÇÔ¼öÀÇ ¹İÈ¯°ªÀÌ -1ÀÏ¶§ '¿¡·¯ ¹ß»ı' Ãâ·Â
-//	if (p == -1) {
-//		printf("¿¡·¯ ¹ß»ı");
-//	}
-//	//get_line ÇÔ¼öÀÇ ¹İÈ¯°ªÀÌ -1ÀÌ ¾Æ´Ò¶§ ±â¿ï±â¿Í yÀıÆí Ãâ·Â
-//	if (p != -1) {
-//		printf("±â¿ï±â: %.2f, yÀıÆí: %.2f", s, y);
-//	}
-//	return 0;
-//}
-//
-//// float* = ÁÖ¼Ò ÀÌ¸§
-//// &s = s¶ó´Â ÀÚ·áÇüÀÇ ÁÖ¼Ò
-//int get_line(int x1, int y1, int x2, int y2, float* slope, float* y_intercept)
-//{
-//	int p;
-//	if (x1 != x2) {
-//		*slope = (float)((y2 - y1) / (x2 - x1));
-//		*y_intercept = y1 - (*slope * x1);
-//		p = 2;
-//	}
-//	else {
-//		p = -1;
-//	}
-//	return p;
-//}
+#include<stdio.h>
+//í¬ì¸í„°ë¥¼ ì´ìš©í•œ ê°’ ë°˜í™˜ì„ ì´ìš©í•´ ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+
+int get_line(int x1, int y1, int x2, int y2, float* slope, float* y_intercept);
+
+int main()
+{
+	int a, b, c, d;
+	
+	printf("ë‘ ì ì˜ ì¢Œí‘œ ì…ë ¥: \n");
+	scanf_s("%d, %d\n%d, %d", &a, &b, &c, &d);
+
+	float s, y;
+
+	//ë‘ ì¢Œí‘œì˜ x ì¢Œí‘œ ê°’ì´ ê°™ì„ ë•Œ, ê¸°ìš¸ê¸°ë¥¼ êµ¬í•  ìˆ˜ ì—†ìŒ
+	int p = get_line(a, b, c, d, &s, &y);
+	//get_line í•¨ìˆ˜ì˜ ë°˜í™˜ê°’ì´ -1ì¼ë•Œ 'ì—ëŸ¬ ë°œìƒ' ì¶œë ¥
+	if (p == -1) {
+		printf("ì—ëŸ¬ ë°œìƒ");
+	}
+	//get_line í•¨ìˆ˜ì˜ ë°˜í™˜ê°’ì´ -1ì´ ì•„ë‹ë•Œ ê¸°ìš¸ê¸°ì™€ yì ˆí¸ ì¶œë ¥
+	if (p != -1) {
+		printf("ê¸°ìš¸ê¸°: %.2f, yì ˆí¸: %.2f", s, y);
+	}
+	return 0;
+}
+
+// float* = ì£¼ì†Œ ì´ë¦„
+// &s = së¼ëŠ” ìë£Œí˜•ì˜ ì£¼ì†Œ
+int get_line(int x1, int y1, int x2, int y2, float* slope, float* y_intercept)
+{
+	int p;
+	if (x1 != x2) {
+		*slope = (float)((y2 - y1) / (x2 - x1));
+		*y_intercept = y1 - (*slope * x1);
+		p = 2;
+	}
+	else {
+		p = -1;
+	}
+	return p;
+}
