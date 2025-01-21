@@ -1,15 +1,15 @@
-//#include <stdio.h>
-//
-//int main() {
-//	FILE* fp = NULL;
-//	fp = fopen("sample.txt", "w");
-//	if (fp == NULL) {
-//		printf("颇老 凯扁 角菩\n");
-//		return 1;
-//	}
-//	else {
-//		printf("颇老 凯扁 己傍\n");
-//	}
-//	fclose(fp);
-//	return 0;
-//}
+#include <stdio.h>
+
+int main() {
+	FILE* fp = NULL;
+	fp = fopen("sample.txt", "w");
+	if (fp == NULL) {
+		printf("韺岇澕 鞐搓赴 鞁ろ尐\n");
+		return 1;
+	}
+	else {
+		printf("韺岇澕 鞐搓赴 靹标车\n");
+	}
+	fclose(fp);
+	return 0;
+}
