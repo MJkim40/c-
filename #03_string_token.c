@@ -1,16 +1,16 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <string.h>
-//#include <stdio.h>
-//
-//char s[] = "Man is immortal, because he has a soul";
-//char seps[] = " ,"; //±¸ºĞÇÒ ¹®ÀÚ
-//char* token; //tokenÀÌ¶ó´Â Æ÷ÀÎÅÍ º¯¼ö, ÁÖ¼Ò°ª¸¸ µé¾î°¥ ¼ö ÀÖÀ½
-//
-//int main() {
-//	token = strtok(s, seps); //s¶ó°í ÇÏ´Â ¹®ÀÚ¿­ ¾È¿¡¼­ 
-//	while (token != NULL) {
-//		printf("ÅäÅ«: %s\n", token); //string ÅäÅ« »ç¿ëÀº ±ÇÀåÇÏÁö ¾ÊÀ½
-//		token = strtok(NULL, seps);
-//	}
-//	return 0;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include <string.h>
+#include <stdio.h>
+
+char s[] = "Man is immortal, because he has a soul";
+char seps[] = " ,"; //êµ¬ë¶„í•  ë¬¸ì
+char* token; //tokenì´ë¼ëŠ” í¬ì¸í„° ë³€ìˆ˜, ì£¼ì†Œê°’ë§Œ ë“¤ì–´ê°ˆ ìˆ˜ ìˆìŒ
+
+int main() {
+	token = strtok(s, seps); //së¼ê³  í•˜ëŠ” ë¬¸ìì—´ ì•ˆì—ì„œ 
+	while (token != NULL) {
+		printf("í† í°: %s\n", token); //string í† í° ì‚¬ìš©ì€ ê¶Œì¥í•˜ì§€ ì•ŠìŒ
+		token = strtok(NULL, seps);
+	}
+	return 0;
+}
